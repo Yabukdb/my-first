@@ -7,8 +7,7 @@ def hello(name, age, gender):
 
 
 hello("yabu,", 16, "good boy" )
-hello("tsion", 11, "good girl")
-hello("betsi", 5, "good girl")
+
 
 
 
