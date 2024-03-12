@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>yabu cal</title>
+  <link rel="stylesheet" href="cal.css">
+  <header style="font-size: 50px;"><a href="https://github.com/Yabukdb" target="_blank">About Yeabsira</a>HOLD YOUR PHONE HORIZONTALLY</header>
+  <style>
+    #calculator{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: hsl(0, 0%, 15%);
+  border-radius: 15px;
+  max-width: 500px;
+  overflow: hidden;
+}
+#display{
+  width: 100%;
+  padding: 20px;
+  font-size: 5rem;
+  background-color: hsl(0, 0%, 20%);
+  color: white;
+}
+body{
+  margin: 0;
+  
+  align-items: center;
+  height: 100vh;
+  background-color: hsl(0, 0%, 95%);
+}
+#keys{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 25px;
+
+}
+button{
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  border: none;
+  font-size: 3rem;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  background-color: hsl(0, 0%, 30%);
+}
+button:hover{
+  background-color: hsl(0, 0%, 40%);
+}
+button:active{
+  background-color: hsl(0, 0%, 50px);
+}
+.operator{
+  background-color: hsl(35, 100%, 55%);
+  
+}
+.operator:hover{
+  background-color: hsl(35, 100%, 65%);
+
+}
+
+.operator:active{
+  background-color: hsl(35, 100%, 75%);
+
+}
+  </style>
+</head>
+<h1>YEABSIRA first project Ever</h1>
+<h1>DON'T FORGET TO SUBSCRIBE</h1>
+<body style="background-color: rgb(255, 237, 237);">
+  <h2 style="font-size: 50px;">  CLICK THEM</h2>
+  <h3 style="font-size: 48px;">hi there i want to share you my useful youtube videos and channels enjoy them</h3>
+  <ol><li>
+    <a href="https://www.youtube.com/shorts/PU7l9Aa7fhU" class="utp" target="_blank" style="color: rgb(43, 226, 73); font-family: Georgia, 'Times New Roman', Times, serif; font-size: 45px; " >My favorite</a>
+  </li>
+  <li><a href="https://www.youtube.com/shorts/UWL3djTUm48" class="utp" target="_blank" style="color: navy; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 45px;">GOOD</a></li>
+  <li><a href="https://www.youtube.com/shorts/NWOCDimtAPI" class="utp" target="_blank" style="color: rgb(41, 20, 223); font-size: 45px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Complex</a></li>
+</ol>
+    <h3 style="font-size: 48px;">And these are educational youtube channels i am using</h3>
+    <ul>
+      <li>
+        <a href="https://www.youtube.com/watch?v=_FSXJmESFmQ" class="utp" target="_blank" style="color: rgb(58, 243, 34);font-size: 25px; font-family: Verdana, Geneva, Tahoma, sans-serif;">GOAT physics, chemistry, maths</a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=r0_mi8ngNnM" class="utp" target="_blank" style="color: rgb(231, 12, 12);font-size: 25px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">GOAT maths</a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=wFYsufJ9XMM" class="utp" target="_blank" style="color: rgb(73, 70, 255);font-size: 25px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">GOAT chemistry and physics</a>
+      </li>
+    </ul>
+  <div id="calculator"><input id="display" readonly><div id="keys">
+    <button onclick="appendToDisplay('+')" class="operator">+</button>
+    <button onclick="appendToDisplay('7')">7</button>
+    <button onclick="appendToDisplay('8')">8</button>
+    <button onclick="appendToDisplay('9')">9</button>
+    <button onclick="appendToDisplay('-')" class="operator">-</button>
+    <button onclick="appendToDisplay('4')">4</button>
+    <button onclick="appendToDisplay('5')">5</button>
+    <button onclick="appendToDisplay('6')">6</button>
+    <button onclick="appendToDisplay('*')" class="operator">*</button>
+    <button onclick="appendToDisplay('1')">1</button>
+    <button onclick="appendToDisplay('2')">2</button>
+    <button onclick="appendToDisplay('3')">3</button>
+    <button onclick="appendToDisplay('/')" class="operator">/</button>
+    <button onclick="appendToDisplay('0')">0</button>
+    <button onclick="appendToDisplay('.')">.</button>
+    <button onclick="calculate()" class="operator">=</button>
+    <button onclick="clearDisplay()" class="operator">C</button>
+  </div></div>
+  <script>
+    const display = document.getElementById("display");
+
+function appendToDisplay(input){
+    display.value += input;
+}
+function clearDisplay(){
+ display.value = "";
+}
+function calculate(){
+  try{
+    display.value = eval(display.value);
+  }   
+  catch(error){
+    display.value = "Abdu Mistake";
+  }
+}
+  </script>
+</body>
+</html>
